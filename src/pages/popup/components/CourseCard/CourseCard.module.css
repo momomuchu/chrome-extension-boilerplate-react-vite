@@ -1,0 +1,27 @@
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white; /* So the text is easily readable */
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* A subtle shadow for added depth */
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .courseName {
+    color: black;
+    font-weight: 600; /* A heavier font-weight for modern style */
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif; /* Example of a modern font */
+  }
+  
+  .creator {
+    color: rgba(0, 0, 0, 0.5); /* 50% opacity for lesser prominence */
+    font-weight: 300; /* Lighter font-weight */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+  }
+  

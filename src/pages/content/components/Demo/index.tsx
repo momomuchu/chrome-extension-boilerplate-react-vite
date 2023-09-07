@@ -6,8 +6,19 @@ import { attachTwindStyle } from "@src/shared/style/twind";
 refreshOnUpdate("pages/content");
 
 const root = document.createElement("div");
-root.id = "chrome-extension-boilerplate-react-vite-content-view-root";
+root.id = "beguide";
+// Set inline CSS styles for absolute positioning
+root.style.position = "absolute";
+root.style.top = "0px"; // Adjust the top position as needed
+root.style.left = "0px"; // Adjust the left position as needed
 
+// Set other inline CSS styles
+root.style.width = "300px";
+root.style.height = "100%";
+root.style.backgroundColor = "lightblue";
+root.style.color = "black";
+root.style.fontSize = "16px";
+root.style.padding = "10px";
 document.body.append(root);
 
 const rootIntoShadow = document.createElement("div");

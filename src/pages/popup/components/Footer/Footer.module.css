@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px; /* Adjust based on your design preference */
+    background-color: #f4f4f4; /* A neutral background color */
+}
+
+.footer span {
+    flex: 1;
+    text-align: center;
+}
