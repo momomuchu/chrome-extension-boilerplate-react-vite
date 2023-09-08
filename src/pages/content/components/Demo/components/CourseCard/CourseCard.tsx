@@ -1,30 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const cardStyle: React.CSSProperties = {
   borderRadius: '10px',
   padding: '20px',
-  backgroundColor: 'white', /* So the text is easily readable */
+  border: '1px solid #ccc',
+  backgroundColor: '#4D4D4D',
   transition: 'transform 0.3s',
-  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', /* A subtle shadow for added depth */
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   marginBottom: '30px',
+  height: '70px', // Adjust the height as needed
+  width: '400px', // Adjust the width as needed
 };
 
 const hoverCardStyle: React.CSSProperties = {
-  transform: 'scale(1.1)',
+  transform: 'scale(1.03)',
 };
 
 const courseNameStyle: React.CSSProperties = {
   color: 'black',
-  fontWeight: 600, /* A heavier font-weight for modern style */
-  fontSize: '24px',
+  fontWeight: 600,
+  fontSize: '20px', // Adjust the font size as needed
   marginBottom: '10px',
-  fontFamily: 'Roboto, sans-serif', /* Example of a modern font */
+  fontFamily: 'Roboto, sans-serif',
 };
 
 const creatorStyle: React.CSSProperties = {
-  color: 'rgba(0, 0, 0, 0.5)', /* 50% opacity for lesser prominence */
-  fontWeight: 300, /* Lighter font-weight */
-  fontSize: '18px',
+  color: 'rgba(0, 0, 0, 0.5)',
+  fontWeight: 300,
+  fontSize: '16px', // Adjust the font size as needed
   fontFamily: 'Roboto, sans-serif',
 };
 
@@ -34,11 +37,13 @@ type Props = {
 };
 
 const CourseCard: React.FC<Props> = ({ courseName, creator }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
-      style={cardStyle}
-      onMouseEnter={() => (cardStyle.transform = "scale(1.1)")}
-      onMouseLeave={() => (cardStyle.transform = "")}
+      style={isHovered ? { ...cardStyle, ...hoverCardStyle } : cardStyle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <h2 style={courseNameStyle}>{courseName}</h2>
       <span style={creatorStyle}>{creator}</span>
