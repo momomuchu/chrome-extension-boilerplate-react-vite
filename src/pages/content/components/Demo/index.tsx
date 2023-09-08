@@ -8,14 +8,13 @@ refreshOnUpdate("pages/content");
 const root = document.createElement("div");
 root.id = "beguide";
 // Set inline CSS styles for absolute positioning
-root.style.position = "absolute";
+root.style.position = "fixed";
 root.style.top = "0px"; // Adjust the top position as needed
-root.style.left = "0px"; // Adjust the left position as needed
-
+root.style.right = "0px"; // Adjust the left position as needed
 // Set other inline CSS styles
-root.style.width = "300px";
+root.style.width = "500px";
 root.style.height = "100%";
-root.style.backgroundColor = "lightblue";
+root.style.backgroundColor = "#333333";
 root.style.color = "black";
 root.style.fontSize = "16px";
 root.style.padding = "10px";
@@ -23,6 +22,8 @@ document.body.append(root);
 
 const rootIntoShadow = document.createElement("div");
 rootIntoShadow.id = "shadow-root";
+rootIntoShadow.style.marginLeft = "30px";
+rootIntoShadow.style.marginRight = "30px";
 
 const shadowRoot = root.attachShadow({ mode: "open" });
 shadowRoot.appendChild(rootIntoShadow);

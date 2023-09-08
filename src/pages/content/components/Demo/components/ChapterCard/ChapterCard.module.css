@@ -1,0 +1,33 @@
+.chapterContainer {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    overflow: hidden; /* This will ensure child elements with rounded corners don't leak out of the parent */
+}
+
+.chapter {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chapter:hover {
+    background-color: #e1e1e1;
+}
+
+.sections {
+    padding-left: 10px; /* To give some space, indicating hierarchy */
+}
+
+.section {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #e1e1e1; /* This gives separation between sections */
+}
+
+.tag {
+    background-color: #e1e1e1;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
